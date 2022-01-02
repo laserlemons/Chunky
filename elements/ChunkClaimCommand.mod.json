@@ -1,0 +1,11 @@
+{
+  "_fv": 24,
+  "_type": "command",
+  "definition": {
+    "commandName": "claimchunk",
+    "permissionLevel": "No requirement",
+    "onCommandExecuted": {
+      "name": "ChunkClaimCommandExecuted"
+    }
+  }
+}

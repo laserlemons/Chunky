@@ -1,0 +1,124 @@
+{
+  "mod_elements": [
+    {
+      "name": "ChunkClaimCommandExecuted",
+      "type": "procedure",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "chunk_claim_command_executed",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GenerateFiles",
+      "type": "procedure",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "generate_files",
+      "metadata": {
+        "dependencies": []
+      }
+    },
+    {
+      "name": "ChunkClaimCommand",
+      "type": "command",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "chunk_claim_command"
+    },
+    {
+      "name": "AccessDataFile",
+      "type": "procedure",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "access_data_file",
+      "metadata": {
+        "dependencies": []
+      }
+    },
+    {
+      "name": "AccessConfigFile",
+      "type": "procedure",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "access_config_file",
+      "metadata": {
+        "dependencies": []
+      }
+    }
+  ],
+  "variable_elements": [
+    {
+      "name": "CONFIG_FILE",
+      "type": "string",
+      "scope": "global",
+      "value": "chunkyconfig.json"
+    },
+    {
+      "name": "DATA_FILE",
+      "type": "string",
+      "scope": "global",
+      "value": "chunkydata.json"
+    },
+    {
+      "name": "FILE_FOLDER",
+      "type": "string",
+      "scope": "global",
+      "value": "/config/chunky"
+    }
+  ],
+  "sound_elements": [],
+  "language_map": {
+    "en_us": {}
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": []
+  },
+  "workspaceSettings": {
+    "modid": "chunky",
+    "modName": "Chunky",
+    "version": "1.0.0",
+    "author": "LaserLemons, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Academic Free License v3.0",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": true,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "forge-1.16.5",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
+    "modElementsPackage": "net.mcreator.chunky",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202100353117
+}
