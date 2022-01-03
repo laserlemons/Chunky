@@ -4,9 +4,7 @@ import net.minecraftforge.fml.loading.FMLPaths;
 
 import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.IWorld;
-import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
 
 import net.mcreator.chunky.ChunkyModVariables;
@@ -55,15 +53,15 @@ public class ChunkClaimCommandExecutedProcedure {
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		Entity entity = (Entity) dependencies.get("entity");
 		String playerName = "";
-		File chunkydata = new File("");
 		com.google.gson.JsonObject mainjsonobject = new com.google.gson.JsonObject();
 		Chunk currentchunk = null;
+		File chunkydata = new File("");
+		File chunkyconfig = new File("");
+		chunkyconfig = (File) new File((FMLPaths.GAMEDIR.get().toString() + "" + ChunkyModVariables.FILE_FOLDER),
+				File.separator + ChunkyModVariables.CONFIG_FILE);
 		chunkydata = (File) new File((FMLPaths.GAMEDIR.get().toString() + "" + ChunkyModVariables.FILE_FOLDER),
 				File.separator + ChunkyModVariables.DATA_FILE);
 		playerName = (entity.getDisplayName().getString());
-		if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
-			((PlayerEntity) entity).sendStatusMessage(new StringTextComponent(playerName), (false));
-		}
 		currentchunk = (Chunk) world.getChunk(new BlockPos(x, y, z));
 		mainjsonobject.addProperty((playerName + "_claimed_chunk"), (currentchunk.getPos().getXStart() + " , " + currentchunk.getPos().getZStart()));
 		{
